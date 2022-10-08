@@ -1,0 +1,30 @@
+@use "./utils/themes/colors/colors.scss";
+@use "./utils/themes/mixines/container.scss";
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 20% 70%;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  grid-template-areas: ". . a a ." ". b c c .";
+  gap: 1rem 1rem;
+  justify-content: center;
+  align-content: center;
+  font-size: 16px;
+  background-color: colors.$general;
+}
+
+.common-information {
+  @include container.container;
+  grid-area: a;
+}
+.text-input {
+  @include container.container;
+  grid-area: b;
+}
+.text-trainer {
+  @include container.container;
+  grid-area: c;
+}
+
